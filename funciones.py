@@ -27,66 +27,66 @@
 #     precios = []
 #     stocks = []
 
-#     opcion = 0
+    opcion = 0
 
-#     while opcion != 7:
+    while opcion != 7:
 
-#         opcion = mostrar_menu()
+        opcion = mostrar_menu()
 
-#         if opcion == 1:
-#             cargar_producto(codigos, nombres, precios, stocks)
+        if opcion == 1:
+            cargar_producto(codigos, nombres, precios, stocks)
 
-#         elif opcion == 2:
-#             mostrar_productos(codigos, nombres, precios, stocks)
+        elif opcion == 2:
+            mostrar_productos(codigos, nombres, precios, stocks)
 
-#         elif opcion == 3:
-#             buscar_producto_por_codigo(codigos, nombres, precios, stocks)
+        elif opcion == 3:
+            buscar_producto_por_codigo(codigos, nombres, precios, stocks)
 
-#         elif opcion == 4:
-#             print("Sin terminar, no llegué ;(")
+        elif opcion == 4:
+            print("Sin terminar, no llegué ;(")
 
-#         elif opcion == 5:
-#             mostrar_producto_menor_stocks(codigos, nombres, precios, stocks)
+        elif opcion == 5:
+            mostrar_producto_menor_stocks(codigos, nombres, precios, stocks)
 
-#         elif opcion == 6:
-#             calcular_valor_total_inventario(codigos, nombres, precios, stocks)
+        elif opcion == 6:
+            calcular_valor_total_inventario(codigos, nombres, precios, stocks)
 
-#         elif opcion == 7:
-#             print("Saliendo del programa...")
+        elif opcion == 7:
+            print("Saliendo del programa...")
 
-#         else:
-#             print("Opcion invalida!")
+        else:
+            print("Opcion invalida!")
 
 
 # ejecutar_programa()
 
 
 
-# def buscar_producto(codigo):
-#     for producto in productos:
-#         if producto["codigo"] == codigo:
-#             print(f"su producto encontrado es {producto["nombre"]}")
-#             break
-#         else:
-#             print("producto no encontrado")
+def buscar_producto(codigo):
+    for producto in productos:
+        if producto["codigo"] == codigo:
+            print(f"su producto encontrado es {producto["nombre"]}")
+            break
+        else:
+            print("producto no encontrado")
 
-# buscar_producto(101)
-
-
-# def ordenar(lista):
-#     for i in range(len(lista) - 1):
-#         for j in range(len(lista) - 1):
-#             if lista[j]["precio"] > lista[j + 1]["precio"]:
-#                 aux = lista[j]
-#                 lista[j] = lista[j + 1]
-#                 lista[j + 1] = aux
-
-#     for producto in lista:
-#         print(f"{producto['nombre']} y {producto['precio']}")
+buscar_producto(101)
 
 
+def ordenar(lista):
+    for i in range(len(lista) - 1):
+        for j in range(len(lista) - 1):
+            if lista[j]["precio"] > lista[j + 1]["precio"]:
+                aux = lista[j]
+                lista[j] = lista[j + 1]
+                lista[j + 1] = aux
 
-# ordenar(lista_productos)
+    for producto in lista:
+        print(f"{producto['nombre']} y {producto['precio']}")
+
+
+
+ordenar(lista_productos)
 
 
 # def mostrar_produc():

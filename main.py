@@ -40,13 +40,13 @@ def main():
             mostrar_productos(codigos, nombres, precios, stocks)
 
         elif opcion == "3":
-            buscar_producto(codigos, nombres, precios, stocks)
+            buscar_producto(codigos)
 
         elif opcion == "4":
             ordenar_precio(codigos, nombres, precios, stocks)
 
         elif opcion == "5":
-            mostrar_producto_menor_stocks(codigos, nombres, precios, stocks)
+            mostrar_menor_stocks(codigos, nombres, precios, stocks)
 
         elif opcion == "6":
             calcular_valor_total_inventario(codigos, nombres, precios, stocks)

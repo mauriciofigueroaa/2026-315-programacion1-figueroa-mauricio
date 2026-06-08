@@ -3,6 +3,7 @@
 def cargar_producto(codigos, nombres, precios, stocks):
 
     codigo = (input("ingrese codigo"))
+    codigo = int(codigo)
     nombre = input("ingrese producto: ")
     precio = int(input("ingrese precio:"))
     while precio < 0:
@@ -36,11 +37,12 @@ def mostrar_productos(codigos, nombres , stocks , precios):
         print("-" * 50)
 
 
-def buscar_producto(codigo):
-    codigo = input("ingrese su codigo: ")
-
-    for producto in codigo:
-        if codigo[producto] == codigo:
+def buscar_producto(codigos, nombres):
+    codigo = int(input("ingrese su codigo: "))
+    codigo = int(codigo)
+    for producto in codigos:
+        if codigos[producto] == codigo:
+            
             print(f"su producto encontrado es {codigo}")
             break
         else:
@@ -74,7 +76,7 @@ def ordenar_precio(codigos, nombres, precios, stocks):
 
 
 
-def mostrar_menor(codigos, nombres, precios, stocks):
+def mostrar_menor_stocks(codigos, nombres, precios, stocks):
     print("producto con menor stock")
 
 
