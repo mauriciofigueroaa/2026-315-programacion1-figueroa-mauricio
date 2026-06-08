@@ -37,7 +37,7 @@ def mostrar_productos(codigos, nombres , stocks , precios):
         print("-" * 50)
 
 
-def buscar_producto(codigos, nombres):
+def buscar_producto(codigos):
     codigo = int(input("ingrese su codigo: "))
     codigo = int(codigo)
     for producto in codigos:
@@ -49,20 +49,14 @@ def buscar_producto(codigos, nombres):
             print("producto no encontrado")
 
 
-# def ordenar(lista):
-#     for i in range(len(lista) - 1):
-#         for j in range(len(lista) - 1):
-#             if lista[j]["precio"] > lista[j + 1]["precio"]:
-#                 aux = lista[j]
-#                 lista[j] = lista[j + 1]
-#                 lista[j + 1] = aux
+
 
     for producto in lista:
         print(f"{producto['nombre']} y {producto['precio']}")
 
 
 
-def ordenar_precio(codigos, nombres, precios, stocks):
+def ordenar_precio(nombres, precios):
     for i in range(len(precios)-1):
         for j in range(len(precios) -  1):
             if precios[j] > precios[j+1]:
@@ -70,13 +64,18 @@ def ordenar_precio(codigos, nombres, precios, stocks):
                 precios[j] = precios[j + 1]
                 precios[j + 1] = aux
 
-    for producto in nombres:
-        print(f"{nombres} y {precios}")
+    for i in range(len(precios)):
+        print(f"{precios}  ,{nombres} ")
+        
 
 
 
 
-def mostrar_menor_stocks(codigos, nombres, precios, stocks):
+
+
+
+
+def mostrar_menor_stocks(nombres, stocks):
     print("producto con menor stock")
 
 
@@ -93,9 +92,29 @@ def mostrar_menor_stocks(codigos, nombres, precios, stocks):
         for i in range(len(nombres)):
             if menor > stocks[i]:
                 menor = stocks[i]
-                nombre = nombres[i]
+                nombre_menor = nombres[i]
+            else:
+                menor = stocks[0]
+                nombre_menor = nombres[0]
 
-
-    return print(f"el menor producto es {menor} y {nombre}")
+    return print(f"el menor producto es tiene de stock{menor} y el nombre del producto es : {nombre_menor}")
 
             
+
+def calcular_valor_inventario(precios, stocks):
+
+    total = 0
+
+    for i in range(len(precios)):
+        
+        valor = precios[i] * stocks[i]
+
+        total += valor
+        print(f"{precios[i]} * {stocks[i]}")
+
+
+    return print(f"el valor total del inventario es de {total}")
+
+
+
+def validar_nombre

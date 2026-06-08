@@ -46,10 +46,10 @@ def main():
             ordenar_precio(codigos, nombres, precios, stocks)
 
         elif opcion == "5":
-            mostrar_menor_stocks(codigos, nombres, precios, stocks)
+            mostrar_menor_stocks( nombres , stocks )
 
         elif opcion == "6":
-            calcular_valor_total_inventario(codigos, nombres, precios, stocks)
+            calcular_valor_inventario(precios, stocks)
 
         elif opcion == "7":
             print("Saliendo del programa...")
