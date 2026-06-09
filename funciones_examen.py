@@ -3,12 +3,16 @@
 def cargar_producto(codigos, nombres, precios, stocks):
 
     codigo = (input("ingrese codigo"))
+    if es_numero(codigo) == False:
+        codigo = input("ingrese el codigo correctamente: ")
     codigo = int(codigo)
     nombre = input("ingrese producto: ")
-    precio = int(input("ingrese precio:"))
+    precio = (input("ingrese precio:"))
+    if es_numero(precio) == False:
+        precio= input("reingrese el numero correctamente: ")
     while precio < 0:
         precio = int(input("reingrese precio:"))
-
+    precio = int(precio)
     stock = int(input("ingrese stock"))
     while stock < 0: 
         stock = int(input("reingrese stock: "))
@@ -117,4 +121,16 @@ def calcular_valor_inventario(precios, stocks):
 
 
 
-def validar_nombre
+def es_numero(texto):
+
+    es_numero = True 
+    
+
+    if len(texto) == 0:
+        es_numero = False   # esta vacio
+
+    for i in range(len(texto)):
+        if  texto[i] < "0" or texto[i] > "9":
+            es_numero = False
+
+    return(es_numero)
